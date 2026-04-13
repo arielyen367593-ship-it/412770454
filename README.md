@@ -18,3 +18,7 @@
 ```bash
 pip install yfinance mplfinance pandas matplotlib
 python main.py
+
+生成式AI期中/ ├── README.md ├── main.py                  # 主程式（yfinance + mplfinance） ├── tw_stock_analysis.ipynb  # Jupyter Notebook 執行版本 ├── requirements.txt ├── stock_groups.json        # 族群分類設定檔 └── output/                  # 產出圖檔 ├── 半導體製造族群_大盤K線.png ├── AI硬體伺服器族群_大盤K線.png └── 各股票個股K線圖.png
+
+
