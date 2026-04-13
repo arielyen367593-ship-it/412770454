@@ -70,9 +70,7 @@ python main.py
 生成式AI期中/
 ├── README.md                    # 本檔案（專案說明）
 ├── main.py                      # 主程式（yfinance + mplfinance）
-├── tw_stock_analysis.ipynb      # Jupyter Notebook 互動版本
-├── requirements.txt             # 所需套件清單
-├── stock_groups.json            # 股票分類設定檔
+├── 
 └── output/                      # 所有產出圖檔
     ├── 半導體製造族群_大盤K線.png
     ├── AI硬體伺服器族群_大盤K線.png
