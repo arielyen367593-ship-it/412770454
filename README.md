@@ -14,11 +14,53 @@
 - 開發環境：Python 3 + Jupyter Notebook + Anaconda
 - 資料來源：yfinance
 
+- ---
+
+### 執行環境
+- **Python**：3.10+
+- **pandas**：資料清理與等權重指數計算
+- **yfinance**：從 Yahoo Finance API 抓取真實台股 OHLCV 資料
+- **mplfinance**：專業 K 線圖繪製（個股使用 candle，族群大盤使用 line）
+- **開發環境**：Windows + Anaconda + Jupyter Notebook
+
+---
+
+### 執行方式
+執行後程式會自動完成以下流程：
+1. 讀取預設股票分類（半導體製造族群、AI硬體伺服器族群）
+2. 下載每檔股票最近兩年的歷史資料
+3. 輸出各股票標準 K 線圖（含成交量）
+4. 計算族群等權重大盤指數並輸出線型 K 線圖
+5. 對個股與族群圖表進行趨勢判讀
+6. 將所有圖檔與分析結果輸出至 `output/` 資料夾
+
+```bash
+pip install -r requirements.txt
+python main.py
+
+- ### 專案結構
+
+```bash
+生成式AI期中/
+├── README.md                    # 本檔案（專案說明）
+├── main.py                      # 主程式（yfinance + mplfinance）
+├── tw_stock_analysis.ipynb      # Jupyter Notebook 互動版本
+├── requirements.txt             # 所需套件清單
+├── stock_groups.json            # 股票分類設定檔
+└── output/                      # 所有產出圖檔
+    ├── 半導體製造族群_大盤K線.png
+    ├── AI硬體伺服器族群_大盤K線.png
+    ├── 2330.TW_K線圖.png
+    ├── 2303.TW_K線圖.png
+    ├── 3711.TW_K線圖.png
+    ├── 2454.TW_K線圖.png
+    ├── 6669.TW_K線圖.png
+    ├── 2317.TW_K線圖.png
+    ├── 2382.TW_K線圖.png
+    └── 2308.TW_K線圖.png
+
 ## 執行方式
 ```bash
 pip install yfinance mplfinance pandas matplotlib
-python main.py
-
-生成式AI期中/ ├── README.md ├── main.py                  # 主程式（yfinance + mplfinance） ├── tw_stock_analysis.ipynb  # Jupyter Notebook 執行版本 ├── requirements.txt ├── stock_groups.json        # 族群分類設定檔 └── output/                  # 產出圖檔 ├── 半導體製造族群_大盤K線.png ├── AI硬體伺服器族群_大盤K線.png └── 各股票個股K線圖.png
-
+python 
 
